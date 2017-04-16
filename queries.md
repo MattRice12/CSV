@@ -1,6 +1,7 @@
-Queries:
+#Queries:
 
-*General Queries*
+###General Queries
+
 1. Sort dealers by id:
   `SELECT dealer_id
    FROM dealers
@@ -62,10 +63,8 @@ Queries:
   - lowest-ro_amount:  dealer_id=9906,   customers=13836, amount=$16.67
   - highest-ro_amount: dealer_id=11460,  customers=18852, amount=113.51
 
-______________________-______________________-______________________
-______________________-______________________-______________________
 
-*RO_TOTAL and revenue*
+###RO_TOTAL and revenue
 
 8. Group dealers by ro_total (revenue?):
   `SELECT dealer_id,
@@ -180,9 +179,8 @@ ______________________-______________________-______________________
     ORDER BY 2, 3, 4;`
   If parts_amount and labor_amounts cover all parts and labors respectively, does that mean all parts and labor are costs to the dealer? If that's the case, then since ro_total equals customer parts, labor, and misc, is ro_total a cost to the dealer?
 
-______________________-______________________-______________________-
-______________________-______________________-______________________-
-*oil vs non-oil maintenance*
+
+###oil vs non-oil maintenance
 16. Group by dealer_id: Group dealership by the amount of maintenance involving oil (e.g., oil changes):
   `SELECT dealer_id,
           COUNT(description_1) AS oil_maintenance
@@ -233,10 +231,7 @@ ______________________-______________________-______________________-
     - dealer_id=33078,   non-oil-maintenance=46.14%
     - dealer_id=213660,  non-oil-maintenance=99.98% *** This is interesting. They do almost no oil-related maintenance
 
-______________________-______________________-______________________
-______________________-______________________-______________________
-
-NISSAN!!!!
+###NISSAN!!!!
 
 19. NISSAN vehicles seem to require the most maintenance by a huge margin:
     Times anyone has worked on NISSAN     = 1,299,166 - 88179
@@ -254,6 +249,7 @@ NISSAN!!!!
     NISSAN    | ALTIMA     | 332453
     NISSAN    | MAXIMA     | 129457
     NISSAN    | SENTRA     | 122557
+    
       `SELECT make_name, model_name, COUNT(model_name)
       FROM dealers
       GROUP BY 1, 2
@@ -276,9 +272,8 @@ NISSAN!!!!
     DESC
     LIMIT 3;`
 
-______________________-______________________-______________________-
-______________________-______________________-______________________-
-Model Years
+
+###Model Years
 
 22. Group by dealer_id: show latest model number dealership worked on:
   `SELECT dealer_id,

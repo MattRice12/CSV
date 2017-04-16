@@ -14,4 +14,9 @@ df.to_sql("dealers", engine)
 # Changed username to my psql username and database to my `dealers` database
     ## Not getting the error; script is running for a lot longer. Causing my mac fan to turn on.
     ### IT WORKED!!!!! FINALLY!
-    #### ...Sort of. I should turn the values which are gibberish into null values; but for now this is fine. 
+    #### ...Sort of. Some columns still have wonky values. I should turn the values which are gibberish into null values; but for now this is fine.
+
+
+# What if I use utf-8 encoding?
+# ditto for ISO-8859-1?
+# ditto for cp1252?

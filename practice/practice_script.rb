@@ -1,3 +1,5 @@
+# This script isn't trying to sanitize; it is my early attempt to just write to a new file.
+
 require 'csv'
 
 out_file = File.new('output.tab', 'w')

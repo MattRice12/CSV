@@ -1,3 +1,5 @@
+
+
 string = "R\u00E9sum\u00E9"
 
 open("transcoded.txt", "w:ISO-8859-1") do |io|
